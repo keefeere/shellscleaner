@@ -2,3 +2,5 @@
 /servers.csv
 /serverlistgenerator.xlsx
 Clean.log
+/server*.csv
+/serversall.csv
