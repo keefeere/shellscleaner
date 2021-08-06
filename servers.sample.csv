@@ -1,4 +1,4 @@
-﻿servername;user;pass
-192.168.0.1;Administrator;pa$$word
-192.168.0.2;Administrator;pa$$word
+﻿servername;user;pass;conntype
+192.168.0.1;Administrator;pa$$word;insecure
+192.168.0.2;Administrator;pa$$word;secure
 
