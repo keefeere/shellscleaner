@@ -17,7 +17,7 @@ Remove-Item D:\ChangZhiU*\ -Recurse -Force
 Remove-Item D:\ledianU*\ -Recurse -Force
 
 Remove-Item C:\temp\* -Recurse -Force
-Remove-Item C:\sesman_shell -Recurse -Force
+Remove-Item C:\sesman_shell\* -Recurse -Force
 
 Remove-Item 'c:\$Recycle.Bin\*' -Recurse -Force
 
@@ -34,5 +34,8 @@ net user u5 $Password
 net user u6 $Password
 net user u7 $Password
 net user u8 $Password
+net user u9 $Password
+net user u10 $Password
+net user u11 $Password
 
 Get-ChildItem -File -Recurse -Path C:\Fileshare\ | %{ Remove-Item -Path $_.FullName -force }
