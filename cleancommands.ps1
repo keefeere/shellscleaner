@@ -9,6 +9,7 @@ Remove-Item C:\Windows\Temp\* -Recurse -Force
 Remove-Item c:\shells*\* -Recurse -Force
 Remove-Item C:\XuanZhi*\LDPlayer\* -Recurse -Force
 Remove-Item C:\ChangZhi*\LDPlayer\* -Recurse -Force
+Remove-Item C:\ChangZhi*\dnplayer*\ -Recurse -Force 
 Remove-Item C:\ledian*\LDPlayer\* -Recurse -Force
 
 
@@ -26,7 +27,9 @@ $ip = (Get-WmiObject Win32_NetworkAdapterConfiguration -Filter 'IPEnabled=True')
 $lastOctet = $ip.Split('.')[-1]
 $Password = "newPWD~~$lastOctet"
 
-net user Administrator $Password
+#С Этим есть проблема!! на серверах есть разные сети что приводит к тому что устанавливается пароль не такой как мы ожидаем. 
+#нужно разобраться!!
+#net user Administrator $Password
 net user u1 $Password
 net user u2 $Password
 net user u3 $Password
