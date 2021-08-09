@@ -24,13 +24,12 @@ Remove-Item C:\sesman_shell\* -Recurse -Force
 Remove-Item 'c:\$Recycle.Bin\*' -Recurse -Force
 
 
-$ip = (Get-WmiObject Win32_NetworkAdapterConfiguration -Filter 'IPEnabled=True').IPAddress[0]
+$ip = (Get-WmiObject Win32_NetworkAdapterConfiguration -filter 'IPEnabled=True'|where{$_.DefaultIPGateway}).IPAddress[0]
 $lastOctet = $ip.Split('.')[-1]
 $Password = "newPWD~~$lastOctet"
 
-#С Этим есть проблема!! на серверах есть разные сети что приводит к тому что устанавливается пароль не такой как мы ожидаем. 
-#нужно разобраться!!
-#net user Administrator $Password
+
+net user Administrator $Password
 net user u1 $Password
 net user u2 $Password
 net user u3 $Password
