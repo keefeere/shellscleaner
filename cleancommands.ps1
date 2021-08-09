@@ -10,6 +10,7 @@ Remove-Item c:\shells*\* -Recurse -Force
 Remove-Item C:\XuanZhi*\LDPlayer\* -Recurse -Force
 Remove-Item C:\ChangZhi*\LDPlayer\* -Recurse -Force
 Remove-Item C:\ChangZhi*\dnplayer*\ -Recurse -Force 
+Remove-Item C:\ChangZhi*\ -Recurse -Force
 Remove-Item C:\ledian*\LDPlayer\* -Recurse -Force
 
 
@@ -42,3 +43,4 @@ net user u10 $Password
 net user u11 $Password
 
 Get-ChildItem -File -Recurse -Path C:\Fileshare\ | %{ Remove-Item -Path $_.FullName -force }
+shutdown -r -f -t 30
